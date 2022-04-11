@@ -8,7 +8,6 @@ public class TurretBehaviour : MonoBehaviour
     private Vector3 m_targetPos;
     private Camera _camera;
     private bool _isSelected = false;
-
     private Rigidbody _rigidbody;
 
 
@@ -23,14 +22,6 @@ public class TurretBehaviour : MonoBehaviour
     void FixedUpdate()
     {
         RaycastHit hitInfo;
-        if (Physics.Raycast(transform.position, transform.forward, out hitInfo, 30))
-        {
-            if (hitInfo.transform.gameObject)
-            {
-                
-            }
-        }
-
         //Cast a ray from the camera using the mouse position
         Ray ray = _camera.ScreenPointToRay(Input.mousePosition);
 
@@ -41,8 +32,6 @@ public class TurretBehaviour : MonoBehaviour
             transform.LookAt(m_targetPos);
             _isSelected = false;
         }
-
-
     }
     private void OnMouseDrag()
     {

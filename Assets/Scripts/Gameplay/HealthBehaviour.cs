@@ -11,7 +11,7 @@ public class HealthBehaviour : MonoBehaviour
     [SerializeField]
     private bool _destroyOnDeath;
 
-    public float Health
+    public virtual float Health
     {
         get { return _health; }
     }
@@ -26,6 +26,13 @@ public class HealthBehaviour : MonoBehaviour
         _health -= damgeAmount;
 
         return damgeAmount;
+    }
+
+    public virtual float IncreaseHealth(float HealthIncrease)
+    {
+        _health += HealthIncrease;
+
+        return HealthIncrease;
     }
 
     public virtual void OnDeath()
