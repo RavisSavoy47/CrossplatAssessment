@@ -22,20 +22,17 @@ public class TurretBehaviour : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-
-
-        //if (Physics.Raycast(transform.position, transform.forward, out hitInfo, 30))
-        //{
-        //    if (hitInfo.transform.gameObject)
-        //    {
-        //        m_targetPos = hitInfo.transform.gameObject.transform.position;
-
-        //    }
-        //}
+        RaycastHit hitInfo;
+        if (Physics.Raycast(transform.position, transform.forward, out hitInfo, 30))
+        {
+            if (hitInfo.transform.gameObject)
+            {
+                
+            }
+        }
 
         //Cast a ray from the camera using the mouse position
         Ray ray = _camera.ScreenPointToRay(Input.mousePosition);
-        RaycastHit hitInfo;
 
         //If the ray hit an object...
         if (Physics.Raycast(ray, out hitInfo) & _isSelected == true)
