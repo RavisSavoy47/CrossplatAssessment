@@ -13,7 +13,7 @@ public class BulletBehaviour : MonoBehaviour
     private bool _destroyOnHit;
     private float _currentLifeTime;
     private Rigidbody _rigidbody;
-    private IncreaseStatsBehaviour _stats;
+
 
     public string OwnerTag
     {
@@ -37,7 +37,7 @@ public class BulletBehaviour : MonoBehaviour
     {
         _rigidbody = GetComponent<Rigidbody>();
 
-        _stats = GetComponent<IncreaseStatsBehaviour>();
+        _damage = 1;
     }
 
     private void OnTriggerEnter(Collider other)

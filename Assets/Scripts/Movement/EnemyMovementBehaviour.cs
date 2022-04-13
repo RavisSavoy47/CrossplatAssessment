@@ -23,13 +23,6 @@ public class EnemyMovementBehaviour : MovementBehaviour
         set { _speed = value; }
     }
 
-    public virtual float IncreaseDamge(float damgeIncrease)
-    {
-        _damage += damgeIncrease;
-
-        return damgeIncrease;
-    }
-
     // Update is called once per frame
     public override void Update()
     {

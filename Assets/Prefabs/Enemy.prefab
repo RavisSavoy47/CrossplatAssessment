@@ -161,4 +161,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _enemyHealth: {fileID: 7444885347142352988}
   _turret: {fileID: 3350180830268313735, guid: d748a7c44c6a91e49b7648d837f6cd11, type: 3}
-  _enemy: {fileID: 2045308385103711597}

@@ -6,6 +6,7 @@ TagManager:
   tags:
   - turret
   - castle
+  - enemy
   layers:
   - Default
   - TransparentFX

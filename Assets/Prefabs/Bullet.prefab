@@ -63,7 +63,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _damage: 1
-  _lifeTime: 5
+  _lifeTime: 2
   _destroyOnHit: 1
 --- !u!1 &1463876432687947048
 GameObject:
