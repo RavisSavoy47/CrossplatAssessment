@@ -12,6 +12,6 @@ public class IncreaseStatsBehaviour : MonoBehaviour
     public virtual void IncreaseStats()
     {
         _enemyHealth.IncreaseHealth(10);
-        _turret.IncreaseDamage(2);
+        _turret.IncreaseDamage(5);
     }
 }
