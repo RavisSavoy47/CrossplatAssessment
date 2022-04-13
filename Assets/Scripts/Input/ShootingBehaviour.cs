@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ShootingBehaviour : MonoBehaviour
 {
@@ -10,7 +11,7 @@ public class ShootingBehaviour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (SceneManager.sceneCount == 1 & Input.GetMouseButtonDown(0))
         {
             _gun.Fire();
         }

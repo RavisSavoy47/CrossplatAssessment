@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EnemySpawnerBehaviour : MonoBehaviour
 {
@@ -13,9 +14,10 @@ public class EnemySpawnerBehaviour : MonoBehaviour
     private float _spawnTime = 5.0f;
     private float _timer = 0.0f;
 
+    //spawns eneies based on a timer
     private void Update()
     {
-        if (_timer >= _spawnTime)
+        if (SceneManager.sceneCount == 1 & _timer >= _spawnTime)
         {
             EnemyMovementBehaviour spawnedEnemy = Instantiate(_enemy, transform.position, transform.rotation);
             spawnedEnemy.Target = _enemyTarget;
