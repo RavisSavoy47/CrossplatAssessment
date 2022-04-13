@@ -10,7 +10,6 @@ public class TurretBehaviour : MonoBehaviour
     private bool _isSelected = false;
     private Rigidbody _rigidbody;
 
-
     // Start is called before the first frame update
     void Awake()
     {

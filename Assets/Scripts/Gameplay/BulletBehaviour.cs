@@ -13,6 +13,7 @@ public class BulletBehaviour : MonoBehaviour
     private bool _destroyOnHit;
     private float _currentLifeTime;
     private Rigidbody _rigidbody;
+    private IncreaseStatsBehaviour _stats;
 
     public string OwnerTag
     {
@@ -25,9 +26,18 @@ public class BulletBehaviour : MonoBehaviour
         get { return _rigidbody; }
     }
 
+    public virtual float IncreaseDamage(float damageIncrease)
+    {
+        _damage += damageIncrease;
+
+        return damageIncrease;
+    }
+
     private void Awake()
     {
         _rigidbody = GetComponent<Rigidbody>();
+
+        _stats = GetComponent<IncreaseStatsBehaviour>();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -40,10 +50,14 @@ public class BulletBehaviour : MonoBehaviour
         if (!otherHealth)
             return;
 
+
         otherHealth.TakeDamge(_damage);
 
         if (_destroyOnHit)
+        {
             Destroy(gameObject);
+        }
+            
     }
     private void Update()
     {

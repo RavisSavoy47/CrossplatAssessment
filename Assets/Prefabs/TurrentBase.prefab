@@ -320,6 +320,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_targetPos: {x: 0, y: 0, z: 0}
+  _cash: 1
 --- !u!54 &574476308543337644
 Rigidbody:
   m_ObjectHideFlags: 0

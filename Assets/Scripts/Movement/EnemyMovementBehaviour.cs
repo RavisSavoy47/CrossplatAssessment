@@ -51,15 +51,6 @@ public class EnemyMovementBehaviour : MovementBehaviour
             //destorys this enemy
             Destroy(gameObject);
 
-            //HealthBehaviour _maxHealth = GetComponent<HealthBehaviour>();
-            //if (_maxHealth.Health <= 0)
-            //{
-            //    //destorys this enemy
-            //    Destroy(gameObject);
-            //    _maxHealth.IncreaseHealth(5);
-            //    IncreaseDamge(1);
-            //}
-
         }
     }
 }

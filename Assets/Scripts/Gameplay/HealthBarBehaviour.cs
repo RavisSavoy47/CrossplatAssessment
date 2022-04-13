@@ -19,6 +19,5 @@ public class HealthBarBehaviour : MonoBehaviour
     void Update()
     {
         _slider.value = _castleHealth.Health;
-
     }
 }

@@ -14,9 +14,11 @@ GameObject:
   - component: {fileID: 7555924992575521663}
   - component: {fileID: 2045308385103711597}
   - component: {fileID: 7444885347142352988}
+  - component: {fileID: 6507198624927829526}
+  - component: {fileID: 6030261403386101570}
   m_Layer: 0
   m_Name: Enemy
-  m_TagString: Untagged
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -127,5 +129,36 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _health: 1
-  _isAlive: 0
+  _isAlive: 1
   _destroyOnDeath: 1
+--- !u!54 &6507198624927829526
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7428563916002732876}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &6030261403386101570
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7428563916002732876}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 601d8ff849d62a94bbfdf4eac4f527a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _enemyHealth: {fileID: 7444885347142352988}
+  _turret: {fileID: 3350180830268313735, guid: d748a7c44c6a91e49b7648d837f6cd11, type: 3}
+  _enemy: {fileID: 2045308385103711597}
