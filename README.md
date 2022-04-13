@@ -1,5 +1,3 @@
-CrossplatAssessment
-
 It is a small tower defense where the enemies are trying to attack the castle.
 Defend the tower by shooting the enemies survive as long as you want.
 
