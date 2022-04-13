@@ -110,7 +110,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a45d5199976e0f44bb7f0726ae6c2119, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _health: 20
+  _health: 1
   _isAlive: 0
   _destroyOnDeath: 0
 --- !u!1 &4281418740216819077

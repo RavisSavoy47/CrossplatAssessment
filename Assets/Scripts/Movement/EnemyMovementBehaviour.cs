@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EnemyMovementBehaviour : MovementBehaviour
 {
@@ -39,7 +40,14 @@ public class EnemyMovementBehaviour : MovementBehaviour
             //Increment the enemycount 
             HealthBehaviour castleHealth = other.GetComponent<HealthBehaviour>();
             if (castleHealth)
+            {
                 castleHealth.TakeDamge(_damage);
+            }
+            if (castleHealth.Health <= 0)
+            {
+                SceneManager.LoadScene("Menu");
+            }
+                
 
             //destorys this enemy
             Destroy(gameObject);
