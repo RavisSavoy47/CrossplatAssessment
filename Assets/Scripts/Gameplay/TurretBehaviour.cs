@@ -5,7 +5,7 @@ using UnityEngine;
 public class TurretBehaviour : MonoBehaviour
 {
     [SerializeField]
-    private Vector3 m_targetPos;
+    private Vector3 _targetPos;
     private Camera _camera;
     private bool _isSelected = false;
     private Rigidbody _rigidbody;
@@ -27,8 +27,8 @@ public class TurretBehaviour : MonoBehaviour
         //If the ray hit an object...
         if (Physics.Raycast(ray, out hitInfo) & _isSelected == true)
         {
-            m_targetPos = (hitInfo.point );
-            transform.LookAt(m_targetPos);
+            _targetPos = (hitInfo.point );
+            transform.LookAt(_targetPos);
             _isSelected = false;
         }
     }

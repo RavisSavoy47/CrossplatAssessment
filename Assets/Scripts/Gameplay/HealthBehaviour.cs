@@ -21,6 +21,7 @@ public class HealthBehaviour : MonoBehaviour
         get { return _isAlive; }
     }
 
+    //The damage taken 
     public virtual float TakeDamge(float damgeAmount)
     {
         _health -= damgeAmount;
@@ -28,6 +29,7 @@ public class HealthBehaviour : MonoBehaviour
         return damgeAmount;
     }
 
+    //Increases the health 
     public virtual float IncreaseHealth(float HealthIncrease)
     {
         _health += HealthIncrease;
@@ -35,6 +37,7 @@ public class HealthBehaviour : MonoBehaviour
         return HealthIncrease;
     }
 
+    //when they take damage 
     public virtual void OnDeath()
     {
         _health--;
@@ -43,11 +46,13 @@ public class HealthBehaviour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //checks if there health and is still alive
         if (_health <= 0 && IsAlive)
             OnDeath();
 
         _isAlive = _health > 0;
 
+        //if the actor is dead
         if (!IsAlive && _destroyOnDeath)
         {
             Destroy(gameObject);

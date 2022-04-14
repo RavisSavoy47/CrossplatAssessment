@@ -8,7 +8,8 @@ public class HealthBarBehaviour : MonoBehaviour
     private Slider _slider;
     [SerializeField]
     private HealthBehaviour _castleHealth;
-    // Start is called before the first frame update
+
+    //sets the slider makes it equal to the castle health
     void Awake()
     {
         _slider = GetComponent<Slider>();
@@ -18,6 +19,7 @@ public class HealthBarBehaviour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //sets the value of to be the health
         _slider.value = _castleHealth.Health;
     }
 }

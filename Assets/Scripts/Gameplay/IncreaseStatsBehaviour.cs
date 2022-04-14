@@ -9,6 +9,7 @@ public class IncreaseStatsBehaviour : MonoBehaviour
     [SerializeField]
     private BulletBehaviour _turret;
 
+    //increases the turret damage and the enemy health
     public virtual void IncreaseStats()
     {
         _enemyHealth.IncreaseHealth(10);

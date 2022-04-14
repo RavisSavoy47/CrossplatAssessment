@@ -11,6 +11,7 @@ public class BulletEmitterBehaviour : MonoBehaviour
     [SerializeField]
     private GameObject _owner;
 
+    //fires the bullet and gives it a force
     public void Fire()
     {
         GameObject bullet = Instantiate(_bulletRef.gameObject, transform.position, transform.rotation);

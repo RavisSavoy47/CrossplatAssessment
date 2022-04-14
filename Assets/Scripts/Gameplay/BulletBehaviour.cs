@@ -26,6 +26,7 @@ public class BulletBehaviour : MonoBehaviour
         get { return _rigidbody; }
     }
 
+    //increases the owners damage
     public virtual float IncreaseDamage(float damageIncrease)
     {
         _damage += damageIncrease;
@@ -40,19 +41,23 @@ public class BulletBehaviour : MonoBehaviour
         _damage = 1;
     }
 
+    /// <summary>
+    /// once it collides with something it calls takedamage on the other health
+    /// </summary>
+    /// <param name="other"></param>
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == OwnerTag)
             return;
-
+        //sets the others health
         HealthBehaviour otherHealth = other.GetComponent<HealthBehaviour>();
 
         if (!otherHealth)
             return;
-
-
+        //deals damage
         otherHealth.TakeDamge(_damage);
 
+        //destroys the bullet on hit
         if (_destroyOnHit)
         {
             Destroy(gameObject);

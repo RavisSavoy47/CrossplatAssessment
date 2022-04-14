@@ -13,7 +13,7 @@ public class CameraZoomBehaviour : MonoBehaviour
     [SerializeField]
     private Vector3 _zoomScale = Vector3.one;
 
-    // Start is called before the first frame update
+    // sets the camera and the aspect ratio
     void Start()
     {
         _camera = GetComponent<Camera>();
@@ -24,6 +24,9 @@ public class CameraZoomBehaviour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (_referenceAspectRation.x <= 0 || _referenceAspectRation.y <= 0)
+            return;
+
         double ratio = _refRatio / _camera.aspect;
         ratio = Math.Round(ratio, 4);
 
